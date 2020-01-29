@@ -1,6 +1,7 @@
 package com.koinbond.apps.network
 
 import com.koinbond.apps.BuildConfig
+import com.koinbond.apps.base.ResponseArray
 import io.reactivex.Observable
 
 class DataManager(private val apiService: ApiService) {
@@ -16,5 +17,7 @@ class DataManager(private val apiService: ApiService) {
     }
 
     //Add Code Below
-
+    fun getExample(): Observable<ResponseArray<String>>{
+        return apiService.getExample()
+    }
 }
